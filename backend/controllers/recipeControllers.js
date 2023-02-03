@@ -1,18 +1,33 @@
-const fetchRecipes = (req, res) => {
-    res.json({message : `get request executed`})
-}
+const asyncHandler = require('express-async-handler')
+const { v4 } = require('uuid')
 
-const postRecipes = (req, res) => {
-    res.json({message : `post request executed`})
-}
+let itemData = [
+    {
+       "name": "Waffles",
+       "toppings": "strawberry",
+       "price": 200
+    }
+ ];
 
-const editRecipes = (req, res) => {
+
+const fetchRecipes = asyncHandler( async (req, res) => {
+    res.json(itemData)
+})
+
+const postRecipes = asyncHandler( async (req, res) => {
+    const item = req.body
+
+    itemData.push({...item, id: v4() })
+    res.json(item)
+})
+
+const editRecipes = asyncHandler( async (req, res) => {
     res.json({message : `put request executed using ${req.params.id}`})
-}
+})
 
-const deleteRecipes = (req, res) => {
+const deleteRecipes = asyncHandler( async (req, res) => {
     res.json({message : `delete request executed using ${req.params.id}`})
-}
+})
 
 module.exports = {
     fetchRecipes,
