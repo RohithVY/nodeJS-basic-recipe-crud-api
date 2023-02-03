@@ -1,7 +1,7 @@
 # nodeJS-basic-recipe-crud-api
 a simple recipe api where user can Create, Read, Update and Delete a recipe
 
-Running the Backend Assignment
+<h1>Running the Backend Assignment</h1>
 This guide will help you run the backend assignment on your local machine. The backend uses Node.js and npm, so make sure you have these installed before you start.
 
 Steps to run the backend
