@@ -5,6 +5,7 @@ a simple recipe api where user can Create, Read, Update and Delete a recipe
 This guide will help you run the backend assignment on your local machine. The backend uses Node.js and npm, so make sure you have these installed before you start.
 
 <h3>Steps to run the backend</h3>
+____________________________________
 <b>Clone the repository</b>: Clone the repository containing the backend assignment to your local machine using git clone.
 
 <b>Install dependencies</b>: Navigate to the repository directory and run npm install to install the required dependencies.
